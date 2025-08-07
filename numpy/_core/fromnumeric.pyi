@@ -303,7 +303,7 @@ def put(
     a: NDArray[Any],
     ind: _ArrayLikeInt_co,
     v: ArrayLike,
-    mode: _ModeKind = ...,
+    mode: _ModeKind = 'raise',
 ) -> None: ...
 
 @overload
@@ -393,8 +393,8 @@ def sort(
 def argsort(
     a: ArrayLike,
     axis: SupportsIndex | None = ...,
-    kind: _SortKind | None = ...,
-    order: str | Sequence[str] | None = ...,
+    kind: _SortKind | None = None,
+    order: str | Sequence[str] | None = None,
     *,
     stable: bool | None = ...,
 ) -> NDArray[intp]: ...
@@ -1397,7 +1397,7 @@ def cumulative_prod(
 
 def ndim(a: ArrayLike) -> int: ...
 
-def size(a: ArrayLike, axis: int | tuple[int, ...] | None = ...) -> int: ...
+def size(a: ArrayLike, axis: int | tuple[int, ...] | None = None) -> int: ...
 
 @overload
 def around(

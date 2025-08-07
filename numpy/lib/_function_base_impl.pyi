@@ -251,7 +251,7 @@ def piecewise(
 def select(
     condlist: Sequence[ArrayLike],
     choicelist: Sequence[ArrayLike],
-    default: ArrayLike = ...,
+    default: ArrayLike = 0,
 ) -> NDArray[Any]: ...
 
 @overload
@@ -416,7 +416,7 @@ def sort_complex(a: ArrayLike) -> NDArray[complexfloating]: ...
 
 def trim_zeros(
     filt: _TrimZerosSequence[_T],
-    trim: L["f", "b", "fb", "bf"] = ...,
+    trim: L["f", "b", "fb", "bf"] = 'fb',
 ) -> _T: ...
 
 @overload
@@ -1122,7 +1122,7 @@ def insert(
 def append(
     arr: ArrayLike,
     values: ArrayLike,
-    axis: SupportsIndex | None = ...,
+    axis: SupportsIndex | None = None,
 ) -> NDArray[Any]: ...
 
 @overload

@@ -409,22 +409,22 @@ def mask_indices(
 
 def tril_indices(
     n: int,
-    k: int = ...,
-    m: int | None = ...,
+    k: int = 0,
+    m: int | None = None,
 ) -> tuple[NDArray[int_], NDArray[int_]]: ...
 
 def tril_indices_from(
     arr: NDArray[Any],
-    k: int = ...,
+    k: int = 0,
 ) -> tuple[NDArray[int_], NDArray[int_]]: ...
 
 def triu_indices(
     n: int,
-    k: int = ...,
-    m: int | None = ...,
+    k: int = 0,
+    m: int | None = None,
 ) -> tuple[NDArray[int_], NDArray[int_]]: ...
 
 def triu_indices_from(
     arr: NDArray[Any],
-    k: int = ...,
+    k: int = 0,
 ) -> tuple[NDArray[int_], NDArray[int_]]: ...

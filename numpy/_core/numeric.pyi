@@ -1114,7 +1114,7 @@ def roll(
 def rollaxis(
     a: NDArray[_ScalarT],
     axis: int,
-    start: int = ...,
+    start: int = 0,
 ) -> NDArray[_ScalarT]: ...
 
 def moveaxis(
@@ -1249,12 +1249,12 @@ def fromfunction(
 
 def isscalar(element: object) -> TypeGuard[generic | complex | str | bytes | memoryview]: ...
 
-def binary_repr(num: SupportsIndex, width: int | None = ...) -> str: ...
+def binary_repr(num: SupportsIndex, width: int | None = None) -> str: ...
 
 def base_repr(
     number: SupportsAbs[float],
-    base: float = ...,
-    padding: SupportsIndex | None = ...,
+    base: float = 2,
+    padding: SupportsIndex | None = 0,
 ) -> str: ...
 
 @overload

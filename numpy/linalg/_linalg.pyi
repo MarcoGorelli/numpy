@@ -310,13 +310,13 @@ def svdvals(
 
 # TODO: Returns a scalar for 2D arrays and
 # a `(x.ndim - 2)`` dimensionl array otherwise
-def cond(x: _ArrayLikeComplex_co, p: float | L["fro", "nuc"] | None = ...) -> Any: ...
+def cond(x: _ArrayLikeComplex_co, p: float | L["fro", "nuc"] | None = None) -> Any: ...
 
 # TODO: Returns `int` for <2D arrays and `intp` otherwise
 def matrix_rank(
     A: _ArrayLikeComplex_co,
-    tol: _ArrayLikeFloat_co | None = ...,
-    hermitian: bool = ...,
+    tol: _ArrayLikeFloat_co | None = None,
+    hermitian: bool = False,
     *,
     rtol: _ArrayLikeFloat_co | None = ...,
 ) -> Any: ...
