@@ -99,6 +99,9 @@ from ._dtype_like import (
 )
 
 #
+from ._indexing import _ToIndices as _ToIndices
+
+#
 from ._nbit import (
     _NBitByte as _NBitByte,
     _NBitDouble as _NBitDouble,

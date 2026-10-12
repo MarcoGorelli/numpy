@@ -4,7 +4,7 @@ from typing import IO, Any, Generic, Self, SupportsIndex, overload, override
 from typing_extensions import TypeVar
 
 import numpy as np
-from numpy import _ByteOrder, _ToIndices
+from numpy import _ByteOrder
 from numpy._typing import (
     ArrayLike,
     DTypeLike,
@@ -15,6 +15,7 @@ from numpy._typing import (
     _ScalarLike_co,
     _Shape,
     _ShapeLike,
+    _ToIndices,
     _VoidDTypeLike,
 )
 

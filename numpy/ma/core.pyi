@@ -38,7 +38,6 @@ from numpy import (
     _OrderKACF,
     _PartitionKind,
     _SortKind,
-    _ToIndices,
     amax,
     amin,
     bool_,
@@ -106,6 +105,7 @@ from numpy._typing import (
     _SupportsArrayFunc,
     _SupportsDType,
     _TD64Like_co,
+    _ToIndices,
 )
 from numpy._typing._dtype_like import _VoidDTypeLike
 

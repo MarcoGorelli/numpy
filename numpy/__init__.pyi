@@ -36,6 +36,8 @@ from numpy._typing import (  # type: ignore[deprecated]
     _ArrayLikeString_co,
     _ArrayLikeTD64_co,
     _ArrayLikeDT64_co,
+    # Indexing
+    _ToIndices,
     # DTypes
     DTypeLike,
     _DTypeLike,
@@ -899,13 +901,6 @@ type _ToSlices = _ToSlice | _2Tuple[_ToSlice] | _3Tuple[_ToSlice]
 type _ToIndex1 = _ToInt | _PermXY[_ToInt, _ToSlice] | _PermXYY[_ToInt, _ToSlice]
 type _ToIndex2 = _2Tuple[_ToInt] | _PermXYY[_ToSlice, _ToInt]
 type _ToIndex3 = _3Tuple[_ToInt]
-type _ToIndices = (
-    SupportsIndex
-    | _ToSlice
-    | _ArrayLikeInt_co
-    | tuple[SupportsIndex | _ToSlice | _ArrayLikeInt_co | None, ...]
-    | None
-)
 type _ToAdvSlices = _PermXY[_IntND[_1D], _ToSlice] | _PermXYY[_IntND[_1D], _ToSlice]
 type _ToAdvIndex1 = _PermXY[_IntND[_1D], _ToInt] | _PermXYZ[_IntND[_1D], _ToInt, _ToSlice]
 type _ToAdvIndices = _PermXY[_ToIntJustND, _ToSlice | _ToInt] | _PermXYY[_ToIntJustND, _ToSlice | _ToInt]
